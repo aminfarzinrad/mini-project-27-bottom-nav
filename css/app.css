@@ -52,6 +52,7 @@ label::after{
     height: 60px;
     border-radius: 100%;
     box-shadow: 0 5rem 7rem rgba(0, 0, 0, 0.6);
+    transition: transform 0.4s ease;
 }
 .box input:checked + label::after{
     top: -22px;
@@ -60,7 +61,11 @@ label::after{
     font-size: 2.5rem;
     color: #6520a5;
     position: relative;
+    transition: transform 0.4s ease;
 }
 .box input:checked + label i {
     color: #fff;
+}
+.box input:checked + label i, .box input:checked + label::before{
+    transform: translateY(-12px);
 }
