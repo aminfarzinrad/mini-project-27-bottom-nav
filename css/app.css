@@ -33,6 +33,17 @@ body{
     justify-content: center;
     cursor: pointer;    
 }
+label::after{
+    content: '';
+    position: absolute;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 100%;
+    background-color: #fff;
+    top: 0px;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
 .box input:checked + label::before{
     content: '';
     position: absolute;
@@ -41,6 +52,9 @@ body{
     height: 60px;
     border-radius: 100%;
     box-shadow: 0 5rem 7rem rgba(0, 0, 0, 0.6);
+}
+.box input:checked + label::after{
+    top: -22px;
 }
 .icon{
     font-size: 2.5rem;
